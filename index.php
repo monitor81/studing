@@ -1,6 +1,10 @@
 <?
+
 if (isset($_GET['login'])) {
     echo "Привет ". $_GET['login'];
+    session_start();
+    $_SESSION['login']=$_GET['login'];
+    header(location:'profile.php');
 }
 ?>
 <form method= "GET">
